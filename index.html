@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Kolkata</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #imagecard {
+            width: 40%;
+        }
+
+        #hisphoto {
+            width: 100%;
+        }
+
+        #scroller_a {
+            padding: 10px;
+        }
+
+        #scroller_a .vehicle {
+            height: 45px;
+            margin: 20px;
+        }
+
+        .blurred-bg {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blurred-bg .bgImage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(10px);
+            transform: scale(1.1);
+            /* Prevent edge blur cut-off */
+        }
+
+        .content {
+            position: relative;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            z-index: 1;
+            width: 80%;
+        }
+
+        .content img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .content img {
+                height: 30vh;
+                /* Image takes full width of the container */
+            }
+        }
+
+        /* Medium screens (601px to 1024px wide) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .content img {
+                height: 50vh;
+                /* Image takes 75% of the container width */
+            }
+        }
+
+        /* Large screens (1025px and up) */
+        @media (min-width: 1025px) {
+            .content img {
+                height: 70vh;
+                /* Image takes 50% of the container width */
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <section>
+        <header>
+            <nav
+                style="color: white;  font-size: 30px;  background-color: #ffffff01; position: fixed; top: 0; width: 100vw; backdrop-filter: blur(8px); z-index: 200;">
+                <div style="display: flex; align-items: center; justify-content: space-between; padding:12px;">
+
+                    <h1>
+                        Kolkata.
+                    </h1>
+                    <div>
+                        <i class="ri-menu-3-line"></i>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+    </section>
+    <main>
+        <!-- landing page -->
+        <section>
+            <div style="background-color: rgb(0, 0, 0); width: 100%; height: 100vh; background-image: url('https://images.unsplash.com/photo-1536421469767-80559bb6f5e1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat; border-radius: 0 0 60px 60px;" id="landingdiv">
+                <div
+                    style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
+                    <div id="landingContent" style="font-size: 60px; overflow: hidden; padding: 10px;">
+                        <div style="display: flex; flex-wrap: wrap; align-items: center;" id="tagline">
+                            <h1 id="a">Discover&ThickSpace; </h1>
+                            <!-- <h1 id="b"> the Heart of </h1> -->
+                            <div id="place" style="display: flex; margin: 8px;">
+                                <h1>ক </h1>
+                                <h1>ল</h1>
+                                <h1>কা</h1>
+                                <h1>তা</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- history -->
+            <div style="background-color: rgb(0, 0, 0); width: 100%;  color: white;  overflow: hidden; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; "
+                id="cardcontainer">
+
+                <div style="background-color: rgb(255, 255, 255); margin: 20px; padding: 8px;" id="imagecard">
+                    <img src="./media/1690 kolkata.png" id="hisphoto">
+                    <div style="margin: 8px; color: black ; display: flex; justify-content: space-between;">
+                        <p>Kolkata begins as a small trading post along the Hooghly River.</p>
+                        <p>1690</p>
+                    </div>
+                </div>
+
+                <div style="background-color: rgb(255, 255, 255); margin: 20px; padding: 8px;" id="imagecard">
+                    <img src="./media/1757 kolkata.png" id="hisphoto">
+                    <div style="margin: 8px; color: black ; display: flex; justify-content: space-between;">
+                        <p>The Battle of Plassey paves the way for British colonial influence.</p>
+                        <p>1757</p>
+                    </div>
+                </div>
+
+                <div style="background-color: rgb(255, 255, 255); margin: 20px; padding: 8px;" id="imagecard">
+                    <img src="./media/1800 kolkata.png" id="hisphoto">
+                    <div style="margin: 8px; color: black ; display: flex; justify-content: space-between;">
+                        <p>Emerges as a major cultural and commercial hub, blending local traditions with colonial
+                            architecture.</p>
+                        <p>1800</p>
+                    </div>
+                </div>
+
+                <div style="background-color: rgb(255, 255, 255); margin: 20px; padding: 8px;" id="imagecard">
+                    <img src="./media/1911 ckolkat.jpg" id="hisphoto">
+                    <div style="margin: 8px; color: black ; display: flex; justify-content: space-between;">
+                        <p>Briefly serves as the capital of British India, highlighting its historical prominence.
+                        </p>
+                        <p>1911</p>
+                    </div>
+                </div>
+
+                <div style="background-color: rgb(255, 255, 255); margin: 20px; padding: 8px;" id="imagecard">
+                    <img src="./media/1947 kolkata.jpg" id="hisphoto">
+                    <div style="margin: 8px; color: black ; display: flex; justify-content: space-between;">
+                        <p>Indian Independence transforms Kolkata into a vibrant, modern metropolis.</p>
+                        <p>1947</p>
+                    </div>
+                </div>
+
+                <div style="background-color: rgb(255, 255, 255); margin: 20px; padding: 8px;" id="imagecard">
+                    <img src="./media/1970 nkolkata.jpg" id="hisphoto">
+                    <div style="margin: 8px; color: black ; display: flex; justify-content: space-between;">
+                        <p>A period of cultural renaissance and political change shapes the city's contemporary
+                            identity.</p>
+                        <p>1960s - 70s</p>
+                    </div>
+                </div>
+
+                <div style="background-color: rgb(255, 255, 255); margin: 20px; padding: 8px;" id="imagecard">
+                    <img src="./media/2020 kolkata.jpg" id="hisphoto">
+                    <div style="margin: 8px; color: black ; display: flex; justify-content: space-between;">
+                        <p>Kolkata stands as a dynamic blend of heritage and modernity, celebrating its storied past
+                            while evolving with new trends.</p>
+                        <p>Today</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div style="  background-color: #ffee00; display: flex; align-items: center; overflow: hidden;"
+                id="scroller_a">
+                <div style="display: flex; " id="vechicleContainer">
+
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/tram.png" alt="tram">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/tram.png" alt="tram">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/tram.png" alt="tram">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/tram.png" alt="tram">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/yellow taxi kolkata.png" alt="taxi">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/blue_bus_kolkata (1).png" alt="bus">
+                    <img class="vehicle" src="./media/vehicle/red_bus_kolkata.png" alt="mini bus">
+                    <img class="vehicle" src="./media/vehicle/tram.png" alt="tram">
+                </div>
+            </div>
+        </section>
+
+        <!-- <h2>Culture & Demographics</h2>
+        <p>
+            Kolkata is renowned for its vibrant cultural heritage and diverse demographic landscape. Bengali is the
+            primary language, with Hindi and English also widely spoken. The city is a melting pot of traditions and
+            modern influences, where religious harmony and a bustling arts scene go hand in hand.
+        </p> -->
+
+        <div style="background-color: white; height: 100vh; display: flex;overflow-x: hidden;" id="culContainer">
+            <div style="display: flex; height: 100vh; " id="scroller_b">
+
+
+                <div class="blurred-bg">
+                    <img src="https://c0.wallpaperflare.com/path/460/585/163/kolkata-bridge-india-howrah-871492862fe92af1941877da49447068.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://c0.wallpaperflare.com/path/460/585/163/kolkata-bridge-india-howrah-871492862fe92af1941877da49447068.jpg"
+                            alt="" srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Howrah Bridge
+                            </p>
+                            <p>
+                                "Iconic cantilever bridge spanning the Hooghly River."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/76/834/475/kolkata-victoria-memorial-hall-wallpaper-68c6ea36b55f4501f4bc6ca5fce1dbf5.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://r4.wallpaperflare.com/wallpaper/76/834/475/kolkata-victoria-memorial-hall-wallpaper-68c6ea36b55f4501f4bc6ca5fce1dbf5.jpg"
+                            alt="" srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Victoria Memorial
+                            </p>
+                            <p>
+                                "Majestic marble monument blending history and colonial elegance."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/81/598/421/maa-durga-indian-god-wallpaper-20f4060776430202b1db138f4d68be19.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://r4.wallpaperflare.com/wallpaper/81/598/421/maa-durga-indian-god-wallpaper-20f4060776430202b1db138f4d68be19.jpg"
+                            alt="" srcset="">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Durga Thakur
+                            </p>
+                            <p>
+                                "Revered image of Goddess Durga central to local festivities."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://as2.ftcdn.net/v2/jpg/06/55/08/47/1000_F_655084772_AAwxa3Z44FtAAg3ukTSMSZNq88shY2Gd.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://as2.ftcdn.net/v2/jpg/06/55/08/47/1000_F_655084772_AAwxa3Z44FtAAg3ukTSMSZNq88shY2Gd.jpg"
+                            alt="" srcset="">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Macher Jhol
+                            </p>
+                            <p>
+                                "Traditional Bengali fish curry, rich and flavorful."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://as2.ftcdn.net/v2/jpg/07/73/90/29/1000_F_773902918_jHscalEMos3NGkVDF05IhadxNf0nI1Ic.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://as2.ftcdn.net/v2/jpg/07/73/90/29/1000_F_773902918_jHscalEMos3NGkVDF05IhadxNf0nI1Ic.jpg"
+                            alt="" srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Roshogolla
+                            </p>
+                            <p>
+                                "Soft, spongy cheese dessert immersed in sweet syrup."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://t4.ftcdn.net/jpg/07/61/21/13/360_F_761211311_97iEjc7ZWC5UhC1QkWxp3oLxGKsdy7DF.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://t4.ftcdn.net/jpg/07/61/21/13/360_F_761211311_97iEjc7ZWC5UhC1QkWxp3oLxGKsdy7DF.jpg"
+                            alt="" srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Misti Doi
+                            </p>
+                            <p>
+                                "Creamy, caramelized sweet yogurt – a Bengali treat."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://kolkatatourism.travel/images/places-to-visit/headers/college-street-kolkata-tourism-entry-fee-timings-holidays-reviews-header.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://kolkatatourism.travel/images/places-to-visit/headers/college-street-kolkata-tourism-entry-fee-timings-holidays-reviews-header.jpg"
+                            alt="" srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                College Street
+                            </p>
+                            <p>
+                                "Bustling hub of books and intellectual vibrancy."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/princep-ghat-kolkata-wb-2-attr-hero?qlt=82&ts=1726644036907"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/princep-ghat-kolkata-wb-2-attr-hero?qlt=82&ts=1726644036907"
+                            alt="" srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Prinsep Ghat
+                            </p>
+                            <p>
+                                "Picturesque riverside promenade with colonial charm."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://meghasen.in/wp-content/uploads/2023/09/Dakshineswar_Temple1.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://meghasen.in/wp-content/uploads/2023/09/Dakshineswar_Temple1.jpg" alt=""
+                            srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Dakshineswar Temple
+                            </p>
+                            <p>
+                                "Ancient temple dedicated to Goddess Kali, steeped in legend."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blurred-bg">
+                    <img src="https://kolkatatourism.travel/images/places-to-visit/headers/kalighat-kali-temple-kolkata-tourism-entry-fee-timings-holidays-reviews-header.jpg"
+                        alt="Background Image" class="bgImage">
+                    <div class="content">
+                        <img src="https://kolkatatourism.travel/images/places-to-visit/headers/kalighat-kali-temple-kolkata-tourism-entry-fee-timings-holidays-reviews-header.jpg"
+                            alt="" srcset="" style=" width: 100%;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin: 4px; width: 100%; flex-wrap: wrap; font-size: medium;">
+                            <p style="font-weight: bolder;">
+                                Kalighat Kali Temple
+                            </p>
+                            <p>
+                                "Famous shrine of Goddess Kali, a center of deep devotion."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #ffffff;">
+            ok
+        </div>
+
+        <div style="background-color: #ffee00; height: 100vh; width: 100vw;">
+            okok
+        </div>
+        <!-- <p>
+            Key highlights include:
+        <ul>
+            <li>Festivals such as Durga Puja celebrated with grandeur.</li>
+            <li>Traditional culinary delights like Roshogolla and Mishti Doi.</li>
+            <li>A diverse population with a rich mix of local traditions and modern lifestyles.</li>
+        </ul>
+        </p> -->
+
+        <section class="section" id="culture-demographics" style="background-color: #ffffff;">
+            <h2>Culture & Demographics</h2>
+            <p>
+                Kolkata is renowned for its vibrant cultural heritage and diverse demographic landscape. Bengali is the
+                primary language, with Hindi and English also widely spoken. The city is a melting pot of traditions and
+                modern influences, where religious harmony and a bustling arts scene go hand in hand.
+            </p>
+            <p>
+                Key highlights include:
+            <ul>
+                <li>Festivals such as Durga Puja celebrated with grandeur.</li>
+                <li>Traditional culinary delights like Roshogolla and Mishti Doi.</li>
+                <li>A diverse population with a rich mix of local traditions and modern lifestyles.</li>
+            </ul>
+            </p>
+        </section>
+
+        <!-- Fun Facts Section -->
+        <section class="section" id="fun-facts" style="background-color: #fff;">
+            <h2>Fun Facts</h2>
+            <ul class="facts-list">
+                <li><strong>Literary Heritage:</strong> Known as the "City of Furious Creative Energy", Kolkata is the
+                    birthplace of renowned poet Rabindranath Tagore.</li>
+                <li><strong>Architectural Marvels:</strong> Home to the iconic Howrah Bridge, one of the longest
+                    cantilever
+                    bridges in the world.</li>
+                <li><strong>Historic Tram System:</strong> Kolkata boasts Asia’s oldest operating electric tram network.
+                </li>
+                <li><strong>Cultural Institutions:</strong> The Indian Museum, established in 1814, is the oldest museum
+                    in
+                    India.</li>
+                <li><strong>Sporting Passion:</strong> Football is a major part of Kolkata’s sports culture, with a
+                    fervent
+                    local fan base.</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const landing = gsap.timeline()
+        landing.from("#landingdiv", {
+            opacity: 0,
+            duration: 0.5,
+            delay: 1
+        })
+        landing.from("nav", {
+            y: -900,
+            duration: 0.8
+        })
+        landing.from("#tagline #a", {
+            x: -900,
+            duration: 0.8
+        })
+        landing.from("#tagline #b", {
+            opacity: 0,
+            duration: 0.4
+        })
+        landing.from("#place h1", {
+            y: 200,
+            stagger: 0.3,
+            opacity: 0,
+            ease: "elastic.out(1,0.4)",
+        })
+
+        gsap.from('#cardcontainer #imagecard', {
+            opacity: 0,
+            stagger: 1.5,
+            scrollTrigger: {
+                trigger: "#cardcontainer ",
+                scroller: "body",
+                markers: 1,
+                start: "top 20%",
+                end: "top -20%",
+                scrub: 1,
+                // pin: true
+            }
+        })
+
+        gsap.to('#vechicleContainer', {
+            transform: 'translateX(-50%)',
+            duration: 40,
+            repeat: -1,
+            ease: "none"
+        })
+
+        gsap.to("#culContainer #scroller_b", {
+            x: '-900vw',
+            ease: 'none',
+            duration: 0.05,
+            scrollTrigger: {
+                trigger: "#culContainer",
+                scroller: "body",
+                markers: 1,
+                start: "top 0%",
+                end: "top -2700vh",
+                scrub: 1,
+                pin: true,
+            }
+        })
+    </script>
+</body>
+
+</html>
